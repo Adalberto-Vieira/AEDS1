@@ -5,7 +5,7 @@
 void main(){
     /* Localiza o codigo para imprimir caracteres especiais. */
     setlocale(LC_ALL, "");
-    int op=1, numero;
+    int op=1, numero,operacao, x, y,z;
     float diametroBase,altura, largura, comprimento;
     float velocidade,raio;
     while(op!=0){
@@ -87,17 +87,21 @@ void main(){
                 system("cls");
             break;
             case 8:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero ");
+                scanf("%d", &operacao);
+                printf("\nDigite x ");
+                scanf("%d", &x);
+                printf("\nDigite y ");
+                scanf("%d", &y);
+                printf("\nDigite z ");
+                scanf("%d", &z;
+                rintf("\nResultado %f\n",calculaMedia(x,y,z,operacao));
                 system("PAUSE");
                 system("cls");
             break;
             case 9:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
+                printf("\nDigite a operacao: ");
+                scanf("%d", &operacao);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
                 printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
