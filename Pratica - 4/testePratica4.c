@@ -29,7 +29,7 @@ void main(){
         printf("|--------------------|-------------------|\n");
         printf("| 17 - Todas         | 0 - SAIR           |\n");
         printf("|--------------------|-------------------|\n");
-        printf("Opção desejada: ");
+        printf("OpÃ§Ã£o desejada: ");
         scanf("%d",&op);
         switch(op){
             case 1:
@@ -43,48 +43,46 @@ void main(){
             case 2:
                 printf("\nDigite o raio: ");
                 scanf("%f", &raio);
-                printf("\nA area é: %f\n", areaCirculo(raio));
+                printf("\nA area : %f\n", areaCirculo(raio));
                 system("PAUSE");
                 system("cls");
             break;
             case 3:
-                printf("\nDigite o número ");
+                printf("\nDigite o numero ");
                 scanf("%d", &numero);
                 printf("\n%d\n",ehPar(numero));
                 system("PAUSE");
                 system("cls");
             break;
-            case 4:
+            case 5:
+                fflush(stdin);
                 printf("\nDigite o sexo: ");
                 scanf("%c", &sexo);
+                printf("\nDigite a altura: ");
+                fflush(stdin);
+                scanf("%f", &altura);
+                printf("\npeso ideal %f\n",pesoIdeal(altura,sexo));
+                system("PAUSE");
+                system("cls");
+            break;
+            case 4:
+                printf("\nDigite o numero ");
+                scanf("%d", &numero);
                 printf("\n%d\n",ehDivisivelPor3ou5(numero));
                 system("PAUSE");
                 system("cls");
             break;
-            case 5:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
-                system("PAUSE");
-                system("cls");
-            break;
             case 6:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero ");
+                scanf("%d", &numero);
+                printf("\nResultado %d\n",somaImpares(numero));
                 system("PAUSE");
                 system("cls");
             break;
             case 7:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero ");
+                scanf("%d", &numero);
+                printf("\nResultado %ff\n",fatorial(numero));
                 system("PAUSE");
                 system("cls");
             break;
@@ -93,7 +91,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -102,7 +100,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -111,7 +109,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -120,7 +118,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -129,7 +127,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -138,7 +136,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -147,7 +145,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -156,7 +154,7 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
@@ -165,15 +163,15 @@ void main(){
                 scanf("%f", &altura);
                 printf("\nDigite o diametro da base em cm: ");
                 scanf("%f",&diametroBase);
-                printf("\nO volume do solido é %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nO volume do solido Ð¹ %.2f cm cubicos\n",(altura*diametroBase));
                 system("PAUSE");
                 system("cls");
             break;
             case 0:
-                printf("Até logo");
+                printf("AtÐ¹ logo");
             break;
             default:
-                printf("Valor não reconhecido como um comando valido\n");
+                printf("Valor nÐ³o reconhecido como um comando valido\n");
                 system("PAUSE");
                 system("cls");
             break;
