@@ -87,11 +87,11 @@ int mdc(unsigned int x, unsigned int y){
     return y;
 }
 int mmc(unsigned int x, unsigned int y){
-    unsigned int resto=x%y;
-    while(resto!=0){
-        x=y;
-        y = resto;
-        resto = x%y;
-    }
-    return y;
+    unsigned int resto, a=x, b=y;
+    do {
+        resto = a % b;
+        a = b;
+        b = resto;
+    } while (resto != 0);
+    return (x*y)/a;
 }
