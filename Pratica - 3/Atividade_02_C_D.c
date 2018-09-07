@@ -3,14 +3,16 @@
 void soma1(int *x){
     *x+=1;
 }
-void main(){
-    float x = 0;
+float parteFracionaria(float x){
     int aux = 0;
-    scanf("%f", &x);
-    while(x>0?aux<x:aux<-x){
+    while(x>0?aux<x&&(aux+1<x||x-(aux+1)==0):aux<-x&&(aux+1<-x||-x-(aux+1)==0)){
         soma1(&aux);
     }
-    aux--;
-    printf("%f", x>0?x-aux:x+aux);
+    return x>0?x-aux:x+aux;
+}
+void main(){
+    float x = 0;
+    scanf("%f", &x);
+    printf("%f", parteFracionaria(x));
 }
 
