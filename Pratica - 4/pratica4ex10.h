@@ -1,5 +1,5 @@
-#ifndef PRATICA4_H
-#define PRATICA4_H
+#ifndef PRATICA4EX10_H
+#define PRATICA4EX10_H
     float paraMetrosPorSegundo(float v);
     float areaCirculo(float raio);
     int ehPar(int n);

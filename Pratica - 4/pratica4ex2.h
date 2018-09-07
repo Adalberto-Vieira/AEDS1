@@ -1,4 +1,4 @@
-#ifndef PRATICA4ex2_H
-#define PRATICA4ex2_H
+#ifndef PRATICA4EX2_H
+#define PRATICA4EX2_H
     float areaCirculo(float raio);
 #endif
