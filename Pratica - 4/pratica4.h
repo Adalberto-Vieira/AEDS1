@@ -13,5 +13,4 @@
     int enesimoFibonacci(int N);
     int mdc(unsigned int x, unsigned int y);
     int mmc(unsigned int x, unsigned int y);
-
 #endif
