@@ -100,79 +100,39 @@ void main(){
                 system("cls");
             break;
             case 9:
-                printf("\nDigite a operacao: ");
-                scanf("%d", &operacao);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero ");
+                scanf("%d", &numero);
+                printf("\nResultado %d\n",numeroDivisores(numero));
                 system("PAUSE");
                 system("cls");
             break;
             case 10:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero ");
+                scanf("%d", &numero);
+                printf("\nResultado %d\n",enesimoFibonacci(numero));
                 system("PAUSE");
                 system("cls");
             break;
             case 11:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero X");
+                scanf("%d", &x);
+                printf("\nDigite o numero y");
+                scanf("%d", &y);
+                printf("\nResultado %d\n",mdc(x,y));
                 system("PAUSE");
                 system("cls");
             break;
             case 12:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
-                system("PAUSE");
-                system("cls");
-            break;
-            case 13:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
-                system("PAUSE");
-                system("cls");
-            break;
-            case 14:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
-                system("PAUSE");
-                system("cls");
-            break;
-            case 15:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
-                system("PAUSE");
-                system("cls");
-            break;
-            case 16:
-                printf("\nDigite a altura em cm: ");
-                scanf("%f", &altura);
-                printf("\nDigite o diametro da base em cm: ");
-                scanf("%f",&diametroBase);
-                printf("\nO volume do solido й %.2f cm cubicos\n",(altura*diametroBase));
+                printf("\nDigite o numero X");
+                scanf("%d", &x);
+                printf("\nDigite o numero y");
+                scanf("%d", &y);
+                printf("\nResultado %d\n",mdc(x,y));
                 system("PAUSE");
                 system("cls");
             break;
             case 0:
-                printf("Atй logo");
+                printf("Até logo");
             break;
             default:
                 printf("Valor nгo reconhecido como um comando valido\n");
