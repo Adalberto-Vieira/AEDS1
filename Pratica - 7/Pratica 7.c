@@ -1,22 +1,25 @@
 #include <stdio.h>
+#include <math.h>
 #include <stdlib.h>
 #include <locale.h>
 
 int main(){
     /* Localiza o codigo para imprimir caracteres especiais. */
     setlocale(LC_ALL, "");
-    int number[2],v100[100];
+    int contains=0,op, lenghtV,start,fim,v100[100];
     double v8[8];
-    float v5[5],v10[10];
+    float limpa,temp,media=0,v5[5],v10[10],v20[20],sqrtv20[20];
     printf("Digite o número do exercício desejado (0 para encerrar): ");
     scanf("%d",&op);
     while(op!=0){
         switch(op){
             case 1:
-                printf("\nDigite o número correspondente ao valor n :");
-                scanf("%d", &n);
-                for(int i=1; i<=n;i++){
-                    printf("%d ",i);
+                for(int i=0; i<8;i++){
+                    printf("\nDigite o número:");
+                    scanf("%lf", &v8[i]);
+                }
+                for(int i=7; i>=0;i--){
+                    printf(" %g ", v8[i]);
                 }
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
@@ -24,99 +27,132 @@ int main(){
                 system("@cls||clear");
                 break;
             case 2:
-                printf("\nDigite o número correspondente ao valor n :");
-                scanf("%d", &n);
-                for(int i=n; i>=0;i--){
-                    printf("%d ",i);
+                for(int i=0; i<5;i++){
+                    printf("\nDigite o número:");
+                    scanf("%f", &v5[i]);
+                    media+=v5[i];
                 }
+                for(int i=0; i<5;i++){
+                    printf(" %g ", v5[i]);
+                }
+                printf("\nMedia %f",media/5);
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
                 break;
             case 3:
-                printf("\nDigite o número correspondente ao valor n :");
-                scanf("%d", &n);
-                for(int i=1; i<=n;i+=2){
-                    printf("%d ",i);
+                for(int i=0; i<8;i++){
+                    printf("\nDigite o número:");
+                    scanf("%lf", &v8[i]);
                 }
+                printf("\nDigite o 1ª:");
+                scanf("%d", &start);
+                printf("\nDigite o 2ª:");
+                scanf("%d", &fim);
+                printf("\n1ª - %g 2ª - %g",v8[start],v8[fim]);
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
+                media=0;
                 break;
             case 4:
-                printf("\nDigite o número correspondente ao valor n :");
-                scanf("%d", &n);
-                for(int i=0; i<=n;i+=2){
-                   result+=i;
+                for(int i=0; i<10;i++){
+                    printf("\nDigite o número:");
+                    scanf("%f", &v10[i]);
                 }
-                printf("%d ",result);
+                printf("\nNúmeros menores que 0:");
+                for(int i=0; i<10;i++){
+                   if(v10[i]<0){
+                        printf("%g ",v10[i]);
+                   }else{
+                        media+=v10[i];
+                   }
+
+                }
+                printf("\nSoma dos positivos %f",media);
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
-                result=0;
+                media=0;
                 break;
             case 5:
-                for(int i=0; i<10;i++){
-                    printf("\nDigite o número correspondente ao valor n :");
-                    scanf("%d", &n);
-                    result+=n;
+                for(int i=0; i<100;i++){
+                    v100[i]=i*7;
+                    printf("%d\t",v100[i]);
                 }
-                printf("%d ",result/10);
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
-                result=0;
+                media=0;
                 break;
             case 6:
-                printf("\nDigite o número correspondente ao valor n :");
-                scanf("%d", &n);
-                for(int i=1; i<=n;i++){
-                   if(n%i==0){
-                        printf("%d ", i);
-                   }
+                printf("\nDigite o número de elementos:");
+                scanf("%d", &lenghtV);
+                for(int i = 0; i<lenghtV;i++){
+                    printf("\nDigite o número:");
+                    scanf("%f", &v20[i]);
+                    sqrtv20[i]=sqrt(v20[i]);
                 }
-                printf("%d ",result);
+                for(int i=0; i<lenghtV;i++){
+                    printf(" %g ", sqrtv20[i]);
+                }
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
-                result=0;
                 break;
             case 7:
-                for(int i=1; i<=1000;i++){
-                    if(i%3==0 ||i%5==0)
-                        result+=i;
+                for(int i=0; i<100;i++){
+                    v100[i]=rand()%49;
                 }
-                printf("%d ",result);
+                for(int i=0; i<100;i++){
+                    for(int j=i+1;j<100-i;j++){
+                        if(v100[i]==v100[j]){
+                            printf("%d ",v100[i]);
+                        }
+                    }
+                }
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
-                result=0;
+                media=0;
                 break;
             case 8:
-                printf("\nDigite inteiros positivos: ");
-                scanf("%d", &number);
-                min=number;
-                while(number>=0){
-                    scanf("%d", &number);
-                    if(number<min){
-                        min==number;
+                printf("\nDigite o número:");
+                scanf("%f", &v10[0]);
+                for(int i=1; i<10;i++){
+                    printf("\nDigite o número:");
+                    scanf("%f", &temp);
+                    for(int k=0;k<10-(10-i);k++){
+                        if(v10[k]==temp){
+                            contains=1;
+                        }
                     }
-                    if(number>max){
-                        max==number;
+                    while(contains==1){
+                        contains=0;
+                        printf("\nO número digitado já está contido no vetor. Digite outro número: ");
+                        scanf("%f", &temp);
+                        for(int k=0;k<10-(10-i);k++){
+                            if(v10[k]==temp){
+                                contains=1;
+                            }
+                        }
                     }
+                    v10[i]=temp;
                 }
-                printf("O maior número foi %d\nO menor número foi %d",max,min);
+                for(int i=0; i<10;i++){
+                    printf("%g ",v10[i]);
+                }
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
-                result=0;
+                contains=0;
                 break;
             default:
                 printf("Comando não reconhecido");
@@ -124,7 +160,6 @@ int main(){
                 printf("\nDigite algo para continuar");
                 getchar();
                 system("@cls||clear");
-                result=0;
                 break;
 
         }
