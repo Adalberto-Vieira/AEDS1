@@ -5,9 +5,9 @@
 int main(){
     /* Localiza o codigo para imprimir caracteres especiais. */
     setlocale(LC_ALL, "");
-    int op,number,max=-1,min;
-    int result=0;
-    unsigned int n;
+    int number[2],v100[100];
+    double v8[8];
+    float v5[5],v10[10];
     printf("Digite o número do exercício desejado (0 para encerrar): ");
     scanf("%d",&op);
     while(op!=0){
