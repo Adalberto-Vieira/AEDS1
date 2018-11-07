@@ -87,7 +87,7 @@ int main(){
                 result=0;
                 break;
             case 7:
-                for(int i=1; i<=1000;i++){
+                for(int i=1; i<1000;i++){
                     if(i%3==0 ||i%5==0)
                         result+=i;
                 }

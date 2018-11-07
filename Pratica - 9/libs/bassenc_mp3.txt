@@ -1,0 +1,108 @@
+BASSenc_MP3 2.4
+Copyright (c) 2018 Un4seen Developments Ltd. All rights reserved.
+
+Files that you should have found in the BASSenc_MP3 package
+===========================================================
+Win32 version
+-------------
+BASSENC_MP3.TXT    This file
+BASSENC_MP3.DLL    BASSenc_MP3 module
+BASSENC_MP3.CHM    BASSenc_MP3 documentation
+X64\
+  BASSENC_MP3.DLL    64-bit BASSenc_MP3 module
+C\                  C/C++ API...
+  BASSENC_MP3.H      BASSenc_MP3 C/C++ header file
+  BASSENC_MP3.LIB    BASSenc_MP3 import library
+  X64\
+    BASSENC_MP3.LIB    64-bit BASSenc_MP3 import library
+VB\                 Visual Basic API...
+  BASSENC_MP3.BAS    BASSenc_MP3 Visual Basic module
+DELPHI\             Delphi API...
+  BASSENC_MP3.PAS    BASSenc_MP3 Delphi unit
+
+MacOSX version
+--------------
+BASSENC_MP3.TXT    This file
+LIBBASSENC_MP3.DYLIB  BASSenc_MP3 module
+BASSENC_MP3.CHM    BASSenc_MP3 documentation
+BASSENC_MP3.H      BASSenc_MP3 C/C++ header file
+
+Linux version
+-------------
+BASSENC_MP3.TXT    This file
+LIBBASSENC_MP3.SO  BASSenc_MP3 module
+BASSENC_MP3.CHM    BASSenc_MP3 documentation
+BASSENC_MP3.H      BASSenc_MP3 C/C++ header file
+X64\
+  LIBBASSENC_MP3.SO  64-bit BASSenc_MP3 module
+
+
+What's the point?
+=================
+BASSenc_MP3 is an extension to the BASSenc add-on that allows BASS channels
+to be MP3 encoded.
+
+
+Requirements
+============
+BASS 2.4 and BASSenc 2.4.14 or above are required.
+
+
+Using BASSenc_MP3
+=================
+The usage information in the BASS.TXT file (from the BASS package) is also
+applicable to BASSenc_MP3 and other add-ons.
+
+
+Latest Version
+==============
+The latest versions of BASSenc_MP3 & BASS can be found at the BASS website:
+
+	www.un4seen.com
+
+
+Licence
+=======
+BASSenc_MP3 is free to use with BASS.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, BASSENC_MP3 IS PROVIDED
+"AS IS", WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY
+AND/OR FITNESS FOR A PARTICULAR PURPOSE. THE AUTHORS SHALL NOT BE HELD
+LIABLE FOR ANY DAMAGE THAT MAY RESULT FROM THE USE OF BASSENC_MP3. YOU USE
+BASSENC_MP3 ENTIRELY AT YOUR OWN RISK.
+
+Usage of BASSenc_MP3 indicates that you agree to the above conditions.
+
+All trademarks and other registered names contained in the BASSenc_MP3
+package are the property of their respective owners.
+
+
+History
+=======
+These are the major (and not so major) changes at each version stage.
+There are of course bug fixes and other little improvements made along
+the way too! To make upgrading simpler, all functions affected by a
+change to the BASSenc_MP3 interface are listed.
+
+2.4.1 - 1/11/2018
+-----------------
+* Support for image embedding ("--ti" option)
+	BASS_Encode_MP3_Start/File
+
+2.4 - 16/7/2018
+---------------
+* First release
+
+
+Credits
+=======
+MP3 encoding is based on libmp3lame, Copyright (C) 1999-2017 The LAME Project
+http://lame.sourceforge.net/
+
+
+Bug reports, Suggestions, Comments, Enquiries, etc...
+=====================================================
+If you have any of the aforementioned please visit the BASS forum at
+the website.
+
