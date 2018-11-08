@@ -8,12 +8,12 @@ int main(){
     int op,number,max=-1,min;
     int result=0;
     unsigned int n;
-    printf("Digite o número do exercício desejado (0 para encerrar): ");
+    printf("Digite o nï¿½mero do exercï¿½cio desejado (0 para encerrar): ");
     scanf("%d",&op);
     while(op!=0){
         switch(op){
             case 1:
-                printf("\nDigite o número correspondente ao valor n :");
+                printf("\nDigite o nï¿½mero correspondente ao valor n :");
                 scanf("%d", &n);
                 for(int i=1; i<=n;i++){
                     printf("%d ",i);
@@ -24,7 +24,7 @@ int main(){
                 system("@cls||clear");
                 break;
             case 2:
-                printf("\nDigite o número correspondente ao valor n :");
+                printf("\nDigite o nï¿½mero correspondente ao valor n :");
                 scanf("%d", &n);
                 for(int i=n; i>=0;i--){
                     printf("%d ",i);
@@ -35,7 +35,7 @@ int main(){
                 system("@cls||clear");
                 break;
             case 3:
-                printf("\nDigite o número correspondente ao valor n :");
+                printf("\nDigite o nï¿½mero correspondente ao valor n :");
                 scanf("%d", &n);
                 for(int i=1; i<=n;i+=2){
                     printf("%d ",i);
@@ -46,7 +46,7 @@ int main(){
                 system("@cls||clear");
                 break;
             case 4:
-                printf("\nDigite o número correspondente ao valor n :");
+                printf("\nDigite o nï¿½mero correspondente ao valor n :");
                 scanf("%d", &n);
                 for(int i=0; i<=n;i+=2){
                    result+=i;
@@ -60,7 +60,7 @@ int main(){
                 break;
             case 5:
                 for(int i=0; i<10;i++){
-                    printf("\nDigite o número correspondente ao valor n :");
+                    printf("\nDigite o nï¿½mero correspondente ao valor n :");
                     scanf("%d", &n);
                     result+=n;
                 }
@@ -72,7 +72,7 @@ int main(){
                 result=0;
                 break;
             case 6:
-                printf("\nDigite o número correspondente ao valor n :");
+                printf("\nDigite o nï¿½mero correspondente ao valor n :");
                 scanf("%d", &n);
                 for(int i=1; i<=n;i++){
                    if(n%i==0){
@@ -111,7 +111,7 @@ int main(){
                         max==number;
                     }
                 }
-                printf("O maior número foi %d\nO menor número foi %d",max,min);
+                printf("O maior nï¿½mero foi %d\nO menor nï¿½mero foi %d",max,min);
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
@@ -119,7 +119,7 @@ int main(){
                 result=0;
                 break;
             default:
-                printf("Comando não reconhecido");
+                printf("Comando nï¿½o reconhecido");
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
@@ -128,9 +128,9 @@ int main(){
                 break;
 
         }
-        printf("Digite o número do exercício desejado (0 para encerrar): ");
+        printf("Digite o nï¿½mero do exercï¿½cio desejado (0 para encerrar): ");
         scanf("%d",&op);
     }
-    printf("Até Logo");
+    printf("Atï¿½ Logo");
 
 }

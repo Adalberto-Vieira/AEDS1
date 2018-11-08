@@ -9,13 +9,13 @@ int main(){
     int contains=0,op, lenghtV,start,fim,v100[100];
     double v8[8];
     float limpa,temp,media=0,v5[5],v10[10],v20[20],sqrtv20[20];
-    printf("Digite o número do exercício desejado (0 para encerrar): ");
+    printf("Digite o nï¿½mero do exercï¿½cio desejado (0 para encerrar): ");
     scanf("%d",&op);
     while(op!=0){
         switch(op){
             case 1:
                 for(int i=0; i<8;i++){
-                    printf("\nDigite o número:");
+                    printf("\nDigite o nï¿½mero:");
                     scanf("%lf", &v8[i]);
                 }
                 for(int i=7; i>=0;i--){
@@ -28,7 +28,7 @@ int main(){
                 break;
             case 2:
                 for(int i=0; i<5;i++){
-                    printf("\nDigite o número:");
+                    printf("\nDigite o nï¿½mero:");
                     scanf("%f", &v5[i]);
                     media+=v5[i];
                 }
@@ -43,14 +43,14 @@ int main(){
                 break;
             case 3:
                 for(int i=0; i<8;i++){
-                    printf("\nDigite o número:");
+                    printf("\nDigite o nï¿½mero:");
                     scanf("%lf", &v8[i]);
                 }
-                printf("\nDigite o 1ª:");
+                printf("\nDigite o 1ï¿½:");
                 scanf("%d", &start);
-                printf("\nDigite o 2ª:");
+                printf("\nDigite o 2ï¿½:");
                 scanf("%d", &fim);
-                printf("\n1ª - %g 2ª - %g",v8[start],v8[fim]);
+                printf("\n1ï¿½ - %g 2ï¿½ - %g",v8[start],v8[fim]);
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
@@ -59,10 +59,10 @@ int main(){
                 break;
             case 4:
                 for(int i=0; i<10;i++){
-                    printf("\nDigite o número:");
+                    printf("\nDigite o nï¿½mero:");
                     scanf("%f", &v10[i]);
                 }
-                printf("\nNúmeros menores que 0:");
+                printf("\nNï¿½meros menores que 0:");
                 for(int i=0; i<10;i++){
                    if(v10[i]<0){
                         printf("%g ",v10[i]);
@@ -90,10 +90,10 @@ int main(){
                 media=0;
                 break;
             case 6:
-                printf("\nDigite o número de elementos:");
+                printf("\nDigite o nï¿½mero de elementos:");
                 scanf("%d", &lenghtV);
                 for(int i = 0; i<lenghtV;i++){
-                    printf("\nDigite o número:");
+                    printf("\nDigite o nï¿½mero:");
                     scanf("%f", &v20[i]);
                     sqrtv20[i]=sqrt(v20[i]);
                 }
@@ -123,10 +123,10 @@ int main(){
                 media=0;
                 break;
             case 8:
-                printf("\nDigite o número:");
+                printf("\nDigite o nï¿½mero:");
                 scanf("%f", &v10[0]);
                 for(int i=1; i<10;i++){
-                    printf("\nDigite o número:");
+                    printf("\nDigite o nï¿½mero:");
                     scanf("%f", &temp);
                     for(int k=0;k<10-(10-i);k++){
                         if(v10[k]==temp){
@@ -135,7 +135,7 @@ int main(){
                     }
                     while(contains==1){
                         contains=0;
-                        printf("\nO número digitado já está contido no vetor. Digite outro número: ");
+                        printf("\nO nï¿½mero digitado jï¿½ estï¿½ contido no vetor. Digite outro nï¿½mero: ");
                         scanf("%f", &temp);
                         for(int k=0;k<10-(10-i);k++){
                             if(v10[k]==temp){
@@ -155,7 +155,7 @@ int main(){
                 contains=0;
                 break;
             default:
-                printf("Comando não reconhecido");
+                printf("Comando nï¿½o reconhecido");
                 fflush(stdin);
                 printf("\nDigite algo para continuar");
                 getchar();
@@ -163,9 +163,9 @@ int main(){
                 break;
 
         }
-        printf("Digite o número do exercício desejado (0 para encerrar): ");
+        printf("Digite o nï¿½mero do exercï¿½cio desejado (0 para encerrar): ");
         scanf("%d",&op);
     }
-    printf("Até Logo");
+    printf("Atï¿½ Logo");
 
 }

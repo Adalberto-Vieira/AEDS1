@@ -13,5 +13,7 @@ typedef struct guerreiro guerreiro;
 
 int rolaDados();
 int bonusCarisma();
-void criaGuerreiro(guerreiro highlander);
+void ataca(guerreiro *p1, guerreiro *p2);
+void criaGuerreiro(guerreiro *highlander);
+int iniciativa(guerreiro *p1,guerreiro *p2,int *iniciativaP1,int *iniciativaP2);
 #endif
