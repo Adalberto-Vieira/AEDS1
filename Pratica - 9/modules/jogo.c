@@ -2,12 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 # include <time.h>
-
 int rolaDados(){
     int val;
-    time_t t;
-    srand((unsigned) time(&t));
-    val=(rand()%6)+(rand()%6)+(rand()%6);
+    val=(rand()%7)+(rand()%7)+(rand()%7);
     return val;
 }
 
@@ -29,8 +26,7 @@ int bonusCarisma(int characterCraismaStatus){
 }
 
 void criaGuerreiro(guerreiro *highlander){
-  time_t t;
-  srand((unsigned) time(&t));
+
   highlander->ataque=rolaDados();
   highlander->defesa=rolaDados();
   highlander->carisma=rolaDados();
@@ -45,17 +41,24 @@ ao das rolagens anteriores, representando sua iniciativa.
 Quando o valor da iniciativa atinge 100, o guerreiro ataca(estilo JRPG).
 Em caso de empate rolase novamente até desempatar.
 */
-int iniciativa(guerreiro *p1,guerreiro *p2,int *iniciativaP1,int *iniciativaP2){
-  while ((*iniciativaP1<100||*iniciativaP2<100) && *iniciativaP1!=*iniciativaP2) {
-    *iniciativaP1=bonusCarisma(p1->carisma)+rolaDados();
-    *iniciativaP2=bonusCarisma(p2->carisma)+rolaDados();
+int ordemAtaque(guerreiro *p1,guerreiro *p2){
+  while ((p1->iniciativa<100||p2->iniciativa<100) && p1->iniciativa==p2->iniciativa) {
+    p1->iniciativa=bonusCarisma(p1->carisma)+rolaDados();
+    p2->iniciativa=bonusCarisma(p2->carisma)+rolaDados();
   }
-  if(&iniciativaP1 > &iniciativaP2){
+  if(p1->iniciativa > p2->iniciativa){
+    p1->iniciativa=0;
     return 0;
   }
+  p2->iniciativa=0;
   return 1;
 }
 
 void ataca(guerreiro *p1,guerreiro *p2){
-  p2->pontosVida-=(bonusCarisma(p1->carisma)+rolaDados())-(bonusCarisma(p2->carisma)+rolaDados());
+  int dano=(bonusCarisma(p1->carisma)+rolaDados())-(bonusCarisma(p2->carisma)+rolaDados());
+  if (dano<0){
+    dano=0;
+  }
+  p2->pontosVida-=dano;
+  printf("\nDano Causado: %d\nVida atual: %d", dano, p2->pontosVida);
 }

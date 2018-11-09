@@ -2,11 +2,12 @@
 #define JOGO_H
 
 struct guerreiro{
-    int idJogador;
     int ataque;
     int defesa;
     int carisma;
+    int idJogador;
     int pontosVida;
+    int iniciativa;
 };
 
 typedef struct guerreiro guerreiro;

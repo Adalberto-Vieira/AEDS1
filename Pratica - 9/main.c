@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "modules/jogo.c"
 #include <locale.h>
+#include <stdlib.h>
 void main(){
   /* Localiza o codigo para imprimir caracteres especiais. */
   setlocale(LC_ALL, "");
-  int op=1;
+  int op=1,round=1;
   guerreiro players[16];
   while (op!=0) {
     system("@cls||clear");
@@ -20,8 +21,11 @@ void main(){
     printf("\nSua escolha: ");
     scanf("%d", &op);
     switch (op) {
+      case 0:
+        break;
       case 1:
         system("@cls||clear");
+        srand(time(NULL));
         printf("\nCriando guerreiros");
         players[0].idJogador=1;
         players[1].idJogador=2;
@@ -34,6 +38,22 @@ void main(){
         fflush(stdin);
         printf("\n\nprecione algo para iniciar a luta...");
         getchar();
+        while (players[0].pontosVida>0 && players[1].pontosVida>0) {
+          system("@cls||clear");
+          printf("\n\nRound %d\n\n", round);
+          if(ordemAtaque(&players[0],&players[1])==1){
+            printf("guerreiro 2 ataca guerreiro 1\n");
+            ataca(&players[1],&players[0]);
+            printf("\n\nprecione algo...");
+            getchar();
+          }else{
+            printf("guerreiro 1 ataca guerreiro 2\n");
+            ataca(&players[0],&players[1]);
+            printf("\n\nprecione algo...");
+            getchar();
+          }
+          round++;
+        }
         break;
       case 2:
 
@@ -41,7 +61,8 @@ void main(){
       default:
         //system("@cls||clear");
         printf("\nPadawan, o caminho que voce esta seguindo leva ao lado negro da forca, de meia volta e corrija seu erro");
-        printf("\nAperte algo para continuar...");
+        printf("\nAperte algo para voltar...");
+        fflush(stdin);
         getchar();
 
         break;
