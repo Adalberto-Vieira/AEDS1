@@ -1,10 +1,13 @@
 #include "jogo.h"
 #include <stdlib.h>
 #include <stdio.h>
-# include <time.h>
+#include <time.h>
 int rolaDados(){
-    int val;
-    val=(rand()%7)+(rand()%7)+(rand()%7);
+    int val=0;
+    while (val<3) {
+      val=0;
+      val=(rand()%7)+(rand()%7)+(rand()%7);
+    }
     return val;
 }
 
@@ -25,12 +28,12 @@ int bonusCarisma(int characterCraismaStatus){
   return 0;
 }
 
-void criaGuerreiro(guerreiro *highlander){
+void criaGuerreiro(guerreiro *heighlander){
 
-  highlander->ataque=rolaDados();
-  highlander->defesa=rolaDados();
-  highlander->carisma=rolaDados();
-  highlander->pontosVida=rolaDados();
+  heighlander->ataque=rolaDados();
+  heighlander->defesa=rolaDados();
+  heighlander->carisma=rolaDados();
+  heighlander->pontosVida=rolaDados();
 }
 
 /*

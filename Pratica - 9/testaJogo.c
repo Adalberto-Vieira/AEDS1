@@ -1,12 +1,14 @@
 #include <stdio.h>
-#include "modules/jogo.c"
 #include <locale.h>
 #include <stdlib.h>
+#include "modules/jogo.c"
+#include "modules/testacampeonato.c"
 void main(){
   /* Localiza o codigo para imprimir caracteres especiais. */
   setlocale(LC_ALL, "");
-  int op=1,round=1;
-  guerreiro players[16];
+  srand(time(NULL));
+  int op=1,uselles;
+  guerreiro *players;
   while (op!=0) {
     system("@cls||clear");
     printf("     _______..______      ___       ______  _______         ___      .______       _______ .__   __.      ___      \n");
@@ -25,8 +27,8 @@ void main(){
         break;
       case 1:
         system("@cls||clear");
-        srand(time(NULL));
         printf("\nCriando guerreiros");
+        players=malloc(sizeof(guerreiro)*2);
         players[0].idJogador=1;
         players[1].idJogador=2;
         criaGuerreiro(&players[0]);
@@ -38,25 +40,11 @@ void main(){
         fflush(stdin);
         printf("\n\nprecione algo para iniciar a luta...");
         getchar();
-        while (players[0].pontosVida>0 && players[1].pontosVida>0) {
-          system("@cls||clear");
-          printf("\n\nRound %d\n\n", round);
-          if(ordemAtaque(&players[0],&players[1])==1){
-            printf("guerreiro 2 ataca guerreiro 1\n");
-            ataca(&players[1],&players[0]);
-            printf("\n\nprecione algo...");
-            getchar();
-          }else{
-            printf("guerreiro 1 ataca guerreiro 2\n");
-            ataca(&players[0],&players[1]);
-            printf("\n\nprecione algo...");
-            getchar();
-          }
-          round++;
-        }
+        luta(&players[0],&players[1]);
+        free(players);
         break;
       case 2:
-
+        rodaCampeonato(players, 16);
         break;
       default:
         //system("@cls||clear");
