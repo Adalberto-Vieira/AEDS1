@@ -1,0 +1,14 @@
+C:\Users\Adalbs\Desktop\AEDS1\Pratica - 4\testePratica4.c: In function 'main':
+C:\Users\Adalbs\Desktop\AEDS1\Pratica - 4\testePratica4.c:40:17: warning: implicit declaration of function 'system' [-Wimplicit-function-declaration]
+                 system("PAUSE");
+                 ^~~~~~
+C:\Users\Adalbs\Desktop\AEDS1\Pratica - 4\testePratica4.c:59:30: error: 'sexo' undeclared (first use in this function)
+                 scanf("%c", &sexo);
+                              ^~~~
+C:\Users\Adalbs\Desktop\AEDS1\Pratica - 4\testePratica4.c:59:30: note: each undeclared identifier is reported only once for each function it appears in
+C:\Users\Adalbs\Desktop\AEDS1\Pratica - 4\testePratica4.c:96:31: error: expected ')' before ';' token
+                 scanf("%d", &z;
+                               ^
+C:\Users\Adalbs\Desktop\AEDS1\Pratica - 4\testePratica4.c:141:9: error: expected ';' before '}' token
+         }
+         ^

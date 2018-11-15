@@ -44,7 +44,6 @@ void main(){
                 printf("\nDigite o raio: ");
                 scanf("%f", &raio);
                 printf("\nA area : %f\n", areaCirculo(raio));
-                system("PAUSE");
                 system("cls");
             break;
             case 3:
