@@ -2,6 +2,6 @@
 #define CONTROLADORJOGO_H
 
 void start();
-void startWithParameters(int argc,int argv[]);
+void startWithParameters(int argc, char *argv[ ] );
 
 #endif

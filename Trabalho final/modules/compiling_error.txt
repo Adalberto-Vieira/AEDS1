@@ -1,18 +1,2 @@
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c:98:6: error: conflicting types for 'palpita'
- void palpita(char *palpite, int *feedback, char *palpiteAnterior, int *feedbackAnterior, int numeroMaximoValor, int repete){
-      ^~~~~~~
-In file included from C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c:3:0:
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.h:29:6: note: previous declaration of 'palpita' was here
- void palpita(char *palpite, int *feedback, char *palpiteAnterior, int numeroMaximoValor, int repete);
-      ^~~~~~~
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c: In function 'palpita':
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c:99:21: error: 'senha' undeclared (first use in this function)
-   int lenght=strlen(senha);
-                     ^~~~~
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c:99:21: note: each undeclared identifier is reported only once for each function it appears in
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c:104:11: error: 'palpitde' undeclared (first use in this function)
-           palpitde[i]=(char)(48+rand()%(numeroMaximoValor+1));
-           ^~~~~~~~
-C:\Users\Adalbs\Desktop\AEDS1\Trabalho final\modules\jogo.c:128:39: error: expected expression before ']' token
-       if(feedbackAnterior[0]<feedback[])
-                                       ^
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status

@@ -7,7 +7,7 @@
 *@param numeroMaximoValor - representa o maior valor de um algorismo(1-10)
 *@param repete - Indica se a existe repitição dos valores da senha
 */
-void geraSenha(char *senha, int numeroMaximoValor, int repete);
+void geraSenha(char *senha, int numeroMaximoValor, int repete, int tamanho);
 
 /*
 * Função reponsavel por avaliar o palpite realizado pelo usuario
@@ -26,6 +26,12 @@ void avaliaPalpite(char *palpite, int *feedback, char *senha, int repete);
 *@param numeroMaximoValor - representa o maior valor de um algorismo(1-10)
 *@param repete - Indica se a existe repitição dos valores da senha
 */
-void palpita(char *palpite, int *feedback, char *palpiteAnterior, int numeroMaximoValor, int repete);
+void palpita(char *palpite, int *feedback, char *palpiteAnterior, int *feedbackAnterior, int numeroMaximoValor, int repete);
 
+/*
+* Função reponsavel por gerar um palpite randomico por parte do computador
+*@param palpite - Representa a variavel reponsavel por armazenar a senha digitada pela maquina
+*@param repete - Indica se a existe repitição dos valores da senha
+*/
+void palpitaRamdom(char *palpite,int repete, int numeroMaximoValor);
 #endif

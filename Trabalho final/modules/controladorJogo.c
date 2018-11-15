@@ -1,42 +1,132 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "jogo.c"
 #include "controladorJogo.h"
-void start();
-void startWithParameters(int argc,int argv[]);
-int main() {
-  int length = 4;
-  unsigned char colors = 6;
-  int n = 1;
-  int i;
-  for (i = 1; i <= length; i++) {
-    n *= colors;
-  }
-  bool* S = create_all(length, colors, n);
-  unsigned char* move = get_code(length, colors, 7); // BestMove(S, length, colors, n);
-  int newN = n;
-  while (n > 0) {
-    printf("%d remaining candidates\n", newN);
-    print_one(move, length);
-    printf("\n");
-    int c;
-    int p;
-    printf("Colors: ");
-    scanf("%d", &c);
-    printf("Place: ");
-    scanf("%d", &p);
-    if (c == 0 && p == 4) {
-      printf("Yay! I win!\n");
+// int validaInput(char *s, int maxValue,int maxLenght){
+//   int a, retorno=1;
+//   if(strlen(s)!=maxLenght){
+//     retorno=0;
+//   }else{
+//     for(int i=0; i<strlen(s);i++){
+//       if((int)s[i]<'0'||(int)s[i]>'9'){
+//         retorno=0;
+//         break;
+//       }
+//       a = s[i] - '0';
+//       if(a>maxValue){
+//         retorno=0;
+//         break;
+//       }
+//     }
+//   }
+//   return retorno;
+// }
+void start(){
+  srand(time(NULL));
+  int op=1;
+
+
+  while (op!=0) {
+    system("@cls||clear");
+    printf("                           __                                             __     \n");
+    printf(" /'\\_/`\\                  /\\ \\__                           __            /\\ \\    \n");
+    printf("/\\      \\     __      ____\\ \\ ,_\\    __   _ __    ___ ___ /\\_\\    ___    \\_\\ \\   \n");
+    printf("\\ \\ \\__\\ \\  /'__`\\   /',__\\\\ \\ \\/  /'__`\\/\\`'__\\/' __` __`\\/\\ \\ /' _ `\\  /'_` \\  \n");
+    printf(" \\ \\ \\_/\\ \\/\\ \\L\\.\\_/\\__, `\\\\ \\ \\_/\\  __/\\ \\ \\/ /\\ \\/\\ \\/\\ \\ \\ \\/\\ \\/\\ \\/\\ \\L\\ \\ \n");
+    printf("  \\ \\_\\\\ \\_\\ \\__/.\\_\\/\\____/ \\ \\__\\ \\____\\\\ \\_\\ \\ \\_\\ \\_\\ \\_\\ \\_\\ \\_\\ \\_\\ \\___,_\\\n");
+    printf("   \\/_/ \\/_/\\/__/\\/_/\\/___/   \\/__/\\/____/ \\/_/  \\/_/\\/_/\\/_/\\/_/\\/_/\\/_/\\/__,_ /\n");
+    printf("\n\n\n                                Player versus Maquina - 1");
+    printf("\n                                Player versus Player  - 2");
+    printf("\n                                Maquina versus Player - 3");
+    printf("\n                                Sair                  - 0");
+    printf("\nSua escolha: ");
+    fflush(stdin);
+    scanf("%d", &op);
+    switch (op) {
+      case 1:
+        system("@cls||clear");
+        printf("\nEscolha a dificuldade: ");
+        printf("\n\nFacil - 1");
+        printf("\nMedio - 2");
+        printf("\nDificil - 3");
+        printf("\nTeste - 4");
+        printf("\nCustumizado - 5");
+        printf("\nVoltar - 6");
+        printf("\n\nSua Escolha: ");
+        scanf("%d", &op);
+        switch (op) {
+          case 1:
+          {
+            char *senha;
+            fflush(stdin);
+            senha=malloc(sizeof(char)*4);
+            senha[4]='\n';
+            geraSenha(senha,4,0,3);
+              printf("A senha e: \"%s\"\n%d", senha,strlen(senha));
+            fflush(stdin);
+            printf("\n\nprecione algo para iniciar...");
+            getchar();
+            free(senha);
+          }
+          break;
+          case 2:
+          {
+            char *senha;
+            fflush(stdin);
+            senha=(char *) malloc(sizeof(char)*5);
+            geraSenha(senha,9,0,4);
+            printf("A senha e: \"%s\"\n%d", senha,strlen(senha));
+            fflush(stdin);
+            printf("\n\nprecione algo para iniciar...");
+            getchar();
+            free(senha);
+          }
+          break;
+          case 3:
+          {
+            char *senha;
+            fflush(stdin);
+            senha=malloc(sizeof(char)*5);
+            geraSenha(senha,9,1,4);
+            printf("A senha e: \"%s\"\n", senha);
+            fflush(stdin);
+            printf("\n\nprecione algo para iniciar...");
+            getchar();
+            free(senha);
+          }
+          break;
+          case 4:
+          {
+            char *senha;
+            fflush(stdin);
+            senha=malloc(sizeof(char)*5);
+            char palpite[5];
+            palpite[5]='\n';
+            geraSenha(senha,9,1,4);
+            printf("A senha e: \"%s\"\n", senha);
+            fflush(stdin);
+            printf("\n\nprecione algo para iniciar...");
+            getchar();
+            system("@cls||clear");
+            printf("Digite seu palpite: ");
+            fflush(stdin);
+            scanf("%s", palpite);
+            while(validaInput(palpite, 9, 5)==0){
+              system("@cls||clear");
+              printf("Seu palpite esta em um padrao errado: ");
+              fflush(stdin);
+              scanf("%s", palpite);
+            }
+            free(senha);
+          }
+          break;
+        }
       break;
     }
-    newN = reduce(S, move, c, p, length, colors, n);
-    if (newN == 0) {
-      printf("I'm Stumped...\n");
-      break;
-    }
-    SetReduce(S, move, c, p, length, colors, n);
-    free(move);
-    move = BestMove(S, length, colors, n);
   }
-  free(S);
-  free(move);
-  return 0;
+}
+
+void startWithParameters(int argc, char *argv[ ] ){
+  srand(time(NULL));
 }
