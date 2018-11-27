@@ -2,7 +2,7 @@
 
 void main(int argc, char *argv[ ]){
   if(argc>1){
-    //startWithParameters(argc, argv);
+    startWithParameters(argc, argv);
   }else{
     start();
   }
