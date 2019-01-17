@@ -12,13 +12,21 @@ float calculaIMC(float peso, float altura){
 }
 
 int main(){
+    //Define as Variaveis do problema, atribuindo valores durante a declaração
     float peso=0, altura=0, IMC=0;
+    //imprime mensagem para o usuario
     printf("Digite o peso: ");
+    //lê o peso
     scanf("%f", &peso);
+    //imprime mensagem para o usuario
     printf("Digite a altura: ");
+    //lê a altura
     scanf("%f", &altura);
+    //Chama a função de calculo do IMC
     IMC = calculaIMC(peso, altura);
+    //imprime mensagem para o usuario
     printf("O IMC desta pessoa e: %.2f\n", IMC);
+    //Bloco de condições do imc
     if (IMC < 16){
         printf("O IMC indica magreza grave");
     }else if(IMC < 17){
